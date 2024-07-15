@@ -1,0 +1,59 @@
+.grass {
+    background: linear-gradient(135deg, rgb(139, 226, 177), rgb(119, 209, 155));
+}
+
+.fire {
+    background: linear-gradient(135deg, rgb(245, 154, 147), rgb(247, 123, 113));
+}
+
+.water {
+    background: linear-gradient(135deg, rgb(159, 217, 255), rgb(145, 202, 253));
+}
+
+.electric {
+    background: linear-gradient(135deg, rgb(241, 216, 150), rgb(255, 215, 111));
+}
+
+.poison {
+    background: linear-gradient(135deg, rgb(199, 156, 216), rgb(124, 83, 140));
+}
+
+.normal {
+    background: linear-gradient(135deg, rgb(201, 207, 187), rgb(175, 182, 163));
+}
+
+.ground {
+    background: linear-gradient(135deg, rgb(187, 137, 130), rgb(176, 114, 107));
+}
+
+.bug {
+    background: linear-gradient(135deg, rgb(190, 214, 140), rgb(168, 204, 89));
+}
+
+.rock {
+    background: linear-gradient(135deg, rgb(207, 207, 207), rgb(189, 189, 189));
+}
+
+.ice {
+    background: linear-gradient(135deg, rgb(144, 228, 239), rgb(113, 209, 218));
+}
+
+.fairy {
+    background: linear-gradient(135deg, rgb(253, 192, 247), rgb(236, 160, 220));
+}
+
+.fighting {
+    background: linear-gradient(135deg, rgb(224, 151, 129), rgb(212, 100, 76));
+}
+
+.psychic {
+    background: linear-gradient(135deg, rgb(252, 177, 205), rgb(239, 118, 160));
+}
+
+.ghost {
+    background: linear-gradient(135deg, rgb(170, 153, 217), rgb(127, 100, 180));
+}
+
+.dragon {
+    background: linear-gradient(135deg, rgb(142, 165, 223), rgb(117, 141, 196));
+}
