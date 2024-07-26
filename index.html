@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link
+      rel="shortcut icon"
+      href="../image/pokeball.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./../styles/color.css" />
+    <link rel="stylesheet" href="./../styles/loading.css" />
+    <link rel="stylesheet" href="./../styles/scrollbar.css" />
+    <link rel="stylesheet" href="./../styles/fonts.css" />
+    <link rel="stylesheet" href="./../styles/media.css">
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="headline">
+        <img src="../image/pokeball.png" alt="pokeball" />
+        <h1>Pokedex</h1>
+      </div>
+      <input type="text" placeholder="search pokemon..." id="search" oninput="searchPokemon()" />
+    </header>
+    <main>
+    <div id="pokedex-container"></div>
+    <div class="load-button-container">
+      <button
+        id="load-more-btn"
+        class="load-pokemons"
+        onclick="loadMorePokemons()"
+      >
+        LOAD MORE
+      </button>
+    </div>
+    <div id="pokemon-detail-view"></div>
+    <div id="loading-screen">
+      <img src="../image/pokeball.png" alt="Loading..." id="loading-spinner" />
+    </div>
+    </main>
+    <footer>
+      <div class="legals-container">
+        <a href="./legals/imprint.html">imprint</a>
+        <a href="#privacy-policy">privacy-policy</a>
+      </div>
+      <div class="flaticon-container">
+        <img src="./../image/pokeball.png">
+        <a
+        href="https://www.flaticon.com/free-icons/pokemon"
+        title="pokemon icons"
+        >icons created by - Flaticon</a
+      >
+      </div>
+
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./script/templates.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script/chart.js"></script>
+  </body>
+</html>

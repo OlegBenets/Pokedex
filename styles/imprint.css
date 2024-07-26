@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    background-image: url('./../image/pokemon-world.jpg');
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.impressum {
+    padding: 50px;
+    color: white;
+}
+
+.impressum a {
+    color: rgb(238, 152, 40);
+    text-decoration: none;
+}
+
+.impressum a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.back-to-pekedex {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    border: 2px solid rgb(238, 152, 40);
+    background-color: rgb(243, 75, 45);
+
+}
+
+.back-to-pekedex a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-to-pekedex a:hover {
+    text-decoration: underline;
+}
