@@ -1,3 +1,11 @@
+/**
+ * Renders an HTML card for a specific Pokémon.
+ *
+ * @param {Object} pokemonData - The data of the Pokémon.
+ * @param {string} types - The type of the Pokémon.
+ * @param {number} i - The index of the Pokémon.
+ * @returns {string} The HTML string for the Pokémon card.
+ */
 function renderPokemonsCard(pokemonData, types, i) {
   return /*html*/ `
     <div class="pokemon-card ${types}" id="pokemon-card-${i}" onclick="pokemonDetailView(${i})">
@@ -18,6 +26,15 @@ function renderPokemonsCard(pokemonData, types, i) {
 `;
 }
 
+/**
+ * Renders the detailed view for a specific Pokémon.
+ *
+ * @param {string} type - The type of the Pokémon.
+ * @param {string} name - The name of the Pokémon.
+ * @param {string} img - The image URL of the Pokémon.
+ * @param {number} index - The index of the Pokémon.
+ * @returns {string} The HTML string for the detailed Pokémon view.
+ */
 function renderPokemonData(type, name, img, index) {
   return /*html*/ `
     <div class="main-card" onclick="closePokemonDetailView()">
@@ -47,6 +64,12 @@ function renderPokemonData(type, name, img, index) {
      `;
 }
 
+/**
+ * Renders the moves of a Pokémon.
+ *
+ * @param {string} moves - The HTML string of the Pokémon's moves.
+ * @returns {string} The HTML string for the Pokémon's moves container.
+ */
 function renderMover(moves) {
   return /*html*/ `
   <div class="moves-container">${moves}</div>

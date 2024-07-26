@@ -1,3 +1,7 @@
+/**
+ * Configuration options for the chart.
+ * @const {Object}
+ */
 const CONFIG_CHART_OPTIONS =  {
     scales: {
       y: {
@@ -6,6 +10,10 @@ const CONFIG_CHART_OPTIONS =  {
     },
   };
 
+/**
+ * Array of colors used for different stats in the chart.
+ * @const {string[]}
+ */
 const color = [
   'rgba(255, 99, 132, 0.7)', // HP
 'rgba(54, 162, 235, 0.7)',  // ATTACK
@@ -15,7 +23,11 @@ const color = [
 'rgba(255, 159, 64, 0.7)'   // SPEED
 ];
 
-
+/**
+ * Renders a polar area chart for a specific Pokémon.
+ * 
+ * @param {number} index - The index of the Pokémon in the pokemonDataArray.
+ */
 function renderChart(index) {
   let pokemon = pokemonDataArray[index];
   const stats = pokemon.stats.map(stat => stat.stat.name);
@@ -42,6 +54,9 @@ function renderChart(index) {
     });
 }
 
+/**
+ * Destroys the existing chart if it exists.
+ */
 function destroyChart() {
   if (window.myChart instanceof Chart) {
     window.myChart.destroy();

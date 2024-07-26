@@ -1,6 +1,19 @@
+/**
+ * Array to hold Pokémon data.
+ * @type {Object[]}
+ */
 let pokemonDataArray = [];
+
+/**
+ * Index to keep track of the current loading position.
+ * @type {number}
+ */
 let currentIndex = 1;
 
+/**
+ * Initializes the application by showing the loading screen, loading Pokémon data,
+ * and rendering the Pokémon cards.
+ */
 async function init() {
   showLoadingScreen();
   await loadPokemons();
@@ -8,6 +21,9 @@ async function init() {
   renderPokemons(pokemonDataArray);
 }
 
+/**
+ * Loads Pokémon data from the API and updates the global pokemonDataArray.
+ */
 async function loadPokemons() {
   showLoadingScreen();
   const step = 25;
@@ -23,6 +39,11 @@ async function loadPokemons() {
   hideLoadingScreen();
 }
 
+/**
+ * Renders Pokémon cards in the container element.
+ *
+ * @param {Object[]} filteredPokemon - Array of Pokémon data to render.
+ */
 function renderPokemons(filteredPokemon) {
   let container = document.getElementById("pokedex-container");
   container.innerHTML = "";
@@ -35,6 +56,9 @@ function renderPokemons(filteredPokemon) {
   }
 }
 
+/**
+ * Loads more Pokémon data and renders the updated list.
+ */
 function loadMorePokemons() {
   showLoadingScreen();
   loadPokemons().then(() => {
@@ -43,6 +67,9 @@ function loadMorePokemons() {
   });
 }
 
+/**
+ * Updates the visibility of the "Load More" button based on the current index.
+ */
 function updateLoadMoreButton() {
   if (currentIndex > 0 && currentIndex < 150) {
     document.getElementById("load-more-btn").style.display = "block";
@@ -51,6 +78,11 @@ function updateLoadMoreButton() {
   }
 }
 
+/**
+ * Displays the detailed view of a specific Pokémon.
+ *
+ * @param {number} index - The index of the Pokémon in the pokemonDataArray.
+ */
 function pokemonDetailView(index) {
   let pokemon = pokemonDataArray[index];
   let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
@@ -65,6 +97,11 @@ function pokemonDetailView(index) {
   renderChart(index);
 }
 
+/**
+ * Displays the moves of a specific Pokémon.
+ *
+ * @param {number} index - The index of the Pokémon in the pokemonDataArray.
+ */
 function showMoves(index) {
   let container = document.getElementById('moves');
   let pokemon = pokemonDataArray[index];
@@ -76,6 +113,11 @@ function showMoves(index) {
   container.innerHTML = renderMover(moves);
 }
 
+/**
+ * Displays the next Pokémon in the detailed view.
+ *
+ * @param {number} index - The current index of the Pokémon in the pokemonDataArray.
+ */
 function nextPokemon(index) {
   index++;
   if(index >= pokemonDataArray.length) {
@@ -84,6 +126,11 @@ function nextPokemon(index) {
   pokemonDetailView(index)
 }
 
+/**
+ * Displays the previous Pokémon in the detailed view.
+ *
+ * @param {number} index - The current index of the Pokémon in the pokemonDataArray.
+ */
 function previousPokemon(index) {
   index--;
   if(index < 0) {
@@ -92,6 +139,9 @@ function previousPokemon(index) {
   pokemonDetailView(index)
 }
 
+/**
+ * Filters and renders Pokémon based on the search input.
+ */
 function searchPokemon() {
   let search = document.getElementById('search').value.toLowerCase();
   if (search.length >= 3) {
@@ -102,19 +152,32 @@ function searchPokemon() {
   }
 }
 
-
+/**
+ * Prevents the event from propagating to parent elements.
+ *
+ * @param {Event} event - The event object.
+ */
 function doNotClose(event) {
   event.stopPropagation();
 }
 
+/**
+ * Closes the Pokémon detailed view.
+ */
 function closePokemonDetailView() {
   document.getElementById("pokemon-detail-view").style.display = "none";
 }
 
+/**
+ * Shows the loading screen.
+ */
 function showLoadingScreen() {
   document.getElementById("loading-screen").style.display = "block";
 }
 
+/**
+ * Hides the loading screen.
+ */
 function hideLoadingScreen() {
   document.getElementById("loading-screen").style.display = "none";
 }
