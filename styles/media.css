@@ -107,20 +107,20 @@
     padding: 2px;
   }
 
-  footer {
+  .footer-container {
     width: calc(100% - 20px);
-    height: 20%;
+    height: 100px;
     padding: 0 10px;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
 
-  footer a {
+  .footer-container a {
     font-size: 14px;
   }
 
-  footer img {
+  .footer-container img {
     width: 24px;
     height: 24px;
   }
@@ -167,7 +167,7 @@
     margin: 10px 0 10px 12px;
   }
   
-  header img {
+  .header-container img {
     width: 40px;
     height: 40px;
   }
@@ -175,6 +175,10 @@
   header {
     height: 110px;
   }
+
+  .header-container input {
+    width: 70%;
+}
   
   .load-pokemons {
     padding: 8px;

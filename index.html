@@ -18,11 +18,13 @@
   </head>
   <body onload="init()">
     <header>
+      <div class="header-container">
       <div class="headline">
         <img src="../image/pokeball.png" alt="pokeball" />
         <h1>Pokedex</h1>
       </div>
       <input type="text" placeholder="search pokemon..." id="search" oninput="searchPokemon()" />
+    </div>
     </header>
     <main>
     <div id="pokedex-container"></div>
@@ -41,19 +43,19 @@
     </div>
     </main>
     <footer>
+      <div class="footer-container">
       <div class="legals-container">
         <a href="./legals/imprint.html">imprint</a>
-        <a href="#privacy-policy">privacy-policy</a>
+        <a href="./legals/privacy-policy.html">privacy-policy</a>
       </div>
       <div class="flaticon-container">
         <img src="./../image/pokeball.png">
         <a
         href="https://www.flaticon.com/free-icons/pokemon"
         title="pokemon icons"
-        >icons created by - Flaticon</a
-      >
+        >icons created by - Flaticon</a>
       </div>
-
+    </div>
     </footer>
     <script src="./script.js"></script>
     <script src="./script/templates.js"></script>
